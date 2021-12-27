@@ -1,6 +1,6 @@
 package com.arrays;
 
-import com.utilities.Utilities;
+import com.util.Utilities;
 
 /*Find the min element starting from 0 till a given index from the array*/
 public class PrefixMin {

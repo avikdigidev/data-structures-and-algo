@@ -1,7 +1,7 @@
 package com.arrays;
 
 
-import com.utilities.Utilities;
+import com.util.Utilities;
 
 /*Find the suffix max array from a given array starting from end of the array*/
 public class ArraySuffixMin {
