@@ -3,4 +3,4 @@ Problems solved during DSA preparation
 *PrefixMax
 *PrefixSum
 *PrefixMin
-
+*SuffixMax
