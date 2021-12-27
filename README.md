@@ -1,6 +1,17 @@
 # programming-pathshala
-Problems solved during DSA preparation
+Problems solved during DSA preparation:
 *PrefixMax
-*PrefixSum
 *PrefixMin
+*PrefixSum
+
 *SuffixMax
+*SuffixMin
+*SuffixSum
+
+*ArrayPrefixMax
+*ArrayPrefixMin
+*ArrayPrefixSum
+
+*ArraySuffixMax
+*ArraySuffixMin
+*ArraySuffixSum
