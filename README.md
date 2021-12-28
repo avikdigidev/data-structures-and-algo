@@ -15,3 +15,5 @@ Problems solved during DSA preparation:
 *ArraySuffixMax
 *ArraySuffixMin
 *ArraySuffixSum
+
+*MaximizeSumArrays
