@@ -1,6 +1,6 @@
 package com.arrays;
 
-import com.utilities.Utilities;
+import com.util.Utilities;
 
 /*Find the prefix max array from a given array starting from 0 till a given index from the array*/
 public class ArrayPrefixMax {

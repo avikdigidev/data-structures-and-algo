@@ -1,4 +1,4 @@
-package com.utilities;
+package com.util;
 
 public class Utilities {
     public static int getMax(int val1, int val2) {

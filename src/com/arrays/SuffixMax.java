@@ -1,6 +1,6 @@
 package com.arrays;
 
-import com.utilities.Utilities;
+import com.util.Utilities;
 
 /*Find the max element starting from end of array till a given index*/
 public class SuffixMax {
