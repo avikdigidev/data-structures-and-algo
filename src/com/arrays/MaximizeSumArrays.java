@@ -1,6 +1,7 @@
 package com.arrays;
 
-import com.utilities.Utilities;
+import com.util.Utilities;
+
 
 import java.util.Scanner;
 
