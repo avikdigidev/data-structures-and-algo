@@ -17,3 +17,4 @@ Problems solved during DSA preparation:
 *ArraySuffixSum
 
 *MaximizeSumArrays
+*MaximumChunks
