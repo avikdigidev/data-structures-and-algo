@@ -18,3 +18,4 @@ Problems solved during DSA preparation:
 
 *MaximizeSumArrays
 *MaximumChunks
+*RotateArrayClockwiseKTimes
