@@ -1,4 +1,4 @@
-package com.arrays;
+package com.renaissance.arrays;
 /*Find the suffix sum array from a given array*/
 public class ArraySuffixSum {
     public static void main(String[] args) {

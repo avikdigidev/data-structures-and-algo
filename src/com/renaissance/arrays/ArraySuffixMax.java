@@ -1,7 +1,7 @@
-package com.arrays;
+package com.renaissance.arrays;
 
 
-import com.util.Utilities;
+import com.util.MyUtilities;
 
 /*Find the suffix max array from a given array starting from end of the array*/
 public class ArraySuffixMax {
@@ -20,7 +20,7 @@ public class ArraySuffixMax {
             if (i == n - 1) {
                 sMax[i] = arr[i];
             } else {
-                sMax[i] = Utilities.getMax(sMax[i + 1], arr[i]);
+                sMax[i] = MyUtilities.getMax(sMax[i + 1], arr[i]);
             }
         }
         return sMax;

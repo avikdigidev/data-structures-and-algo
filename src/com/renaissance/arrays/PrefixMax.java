@@ -1,6 +1,6 @@
-package com.arrays;
+package com.renaissance.arrays;
 
-import com.util.Utilities;
+import com.util.MyUtilities;
 
 /*Find the max element starting from 0 till a given index from the array*/
 public class PrefixMax {
@@ -14,7 +14,7 @@ public class PrefixMax {
     private static int getMax(int[] inputArray, int idx) {
         int max = Integer.MIN_VALUE;
         for (int i = 0; i <= idx; i++) {
-            max = Utilities.getMax(inputArray[i] , max);
+            max = MyUtilities.getMax(inputArray[i] , max);
         }
         return max;
     }

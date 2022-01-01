@@ -1,6 +1,6 @@
-package com.arrays;
+package com.renaissance.arrays;
 
-import com.util.Utilities;
+import com.util.MyUtilities;
 
 public class MaximumChunks {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class MaximumChunks {
         int currentMax = Integer.MIN_VALUE;
         int totalChunks = 0;
         for (int i = 0; i < idx; i++) {
-            currentMax = Utilities.getMax(inputArray[i], currentMax);
+            currentMax = MyUtilities.getMax(inputArray[i], currentMax);
             if (currentMax == i) {
                 totalChunks++;
             }

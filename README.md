@@ -1,5 +1,9 @@
-# programming-pathshala
+# Data Structures and Algorithms
+
 Problems solved during DSA preparation:
+------------------------------------------------------------------------------
+Renaissance Programming Paathshala
+------------------------------------------------------------------------------
 
 *PrefixMax
 

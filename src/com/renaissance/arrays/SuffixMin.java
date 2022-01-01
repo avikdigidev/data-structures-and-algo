@@ -1,6 +1,6 @@
-package com.arrays;
+package com.renaissance.arrays;
 
-import com.util.Utilities;
+import com.util.MyUtilities;
 
 /*Find the max element starting from end of array till a given index*/
 public class SuffixMin {
@@ -18,7 +18,7 @@ public class SuffixMin {
             if (i == length - 1) {
                 max = inputArray[i];
             } else
-                max = Utilities.getMin(inputArray[i], max);
+                max = MyUtilities.getMin(inputArray[i], max);
         }
         return max;
     }

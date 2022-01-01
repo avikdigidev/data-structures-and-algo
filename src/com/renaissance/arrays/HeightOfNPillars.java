@@ -1,6 +1,4 @@
-package com.arrays;
-
-import com.util.Utilities;
+package com.renaissance.arrays;
 
 public class HeightOfNPillars {
     public static void main(String[] args) {

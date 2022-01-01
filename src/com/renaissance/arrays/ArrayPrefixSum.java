@@ -1,4 +1,4 @@
-package com.arrays;
+package com.renaissance.arrays;
 /*Find the prefix sum array from a given array*/
 public class ArrayPrefixSum {
     public static void main(String[] args) {

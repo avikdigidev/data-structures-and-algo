@@ -1,6 +1,6 @@
-package com.arrays;
+package com.renaissance.arrays;
 
-import com.util.Utilities;
+import com.util.MyUtilities;
 
 
 import java.util.Scanner;
@@ -60,7 +60,7 @@ public class MaximizeSumArrays {
             if (i == n - 1) {
                 sMax[i] = c * arr[i];
             } else {
-                sMax[i] = Utilities.getMax(sMax[i + 1], c * arr[i]);
+                sMax[i] = MyUtilities.getMax(sMax[i + 1], c * arr[i]);
             }
         }
         return sMax;
@@ -72,7 +72,7 @@ public class MaximizeSumArrays {
             if (i == 0) {
                 pMax[i] = a * arr[i];
             } else {
-                pMax[i] = Utilities.getMax(pMax[i - 1], a * arr[i]);
+                pMax[i] = MyUtilities.getMax(pMax[i - 1], a * arr[i]);
             }
         }
         return pMax;

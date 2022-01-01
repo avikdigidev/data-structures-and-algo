@@ -1,4 +1,4 @@
-package com.arrays;
+package com.renaissance.arrays;
 // Java Implementation of Right Rotation
 // of an Array K number of times
 

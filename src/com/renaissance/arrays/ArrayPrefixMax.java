@@ -1,6 +1,7 @@
-package com.arrays;
+package com.renaissance.arrays;
 
-import com.util.Utilities;
+
+import com.util.MyUtilities;
 
 /*Find the prefix max array from a given array starting from 0 till a given index from the array*/
 public class ArrayPrefixMax {
@@ -19,7 +20,7 @@ public class ArrayPrefixMax {
             if (i == 0) {
                 pMax[i] = arr[i];
             } else {
-                pMax[i] = Utilities.getMax(pMax[i - 1], arr[i]);
+                pMax[i] = MyUtilities.getMax(pMax[i - 1], arr[i]);
             }
         }
         return pMax;
