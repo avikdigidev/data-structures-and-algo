@@ -24,6 +24,8 @@ Renaissance Programming Paathshala
 
 *ArrayPrefixSum
 
+*ArrayPrefixProduct
+
 *ArraySuffixMax
 
 *ArraySuffixMin
