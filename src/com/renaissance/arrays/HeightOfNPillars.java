@@ -20,24 +20,18 @@ public class HeightOfNPillars {
 
     private static int[] getArrayPrefixMax(int[] arr, int n) {
         int[] pMax = new int[n];
+        pMax[0] = arr[0];
         for (int i = 1; i < n-1; i++) {
-            if (i == 0) {
-                pMax[i] = arr[i];
-            } else {
                 pMax[i] = (pMax[i - 1]> arr[i])? pMax[i-1] : arr[i] ;
-            }
         }
         return pMax;
     }
 
     private static int[] getArraySuffixMax(int[] arr, int n) {
         int sMax[] = new int[n];
+        sMax[n - 1] = arr[n - 1];
         for (int i = n - 2; i >= 0; i--) {
-            if (i == n - 1) {
-                sMax[i] = arr[i];
-            } else {
-                sMax[i] = (sMax[i + 1]< arr[i])? sMax[i + 1] : arr[i] ;
-            }
+                sMax[i] = (sMax[i + 1]> arr[i])? sMax[i + 1] : arr[i] ;
         }
         return sMax;
     }
