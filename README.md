@@ -40,6 +40,8 @@ Renaissance Programming Paathshala
 
 *BestTimeToBuyAndSell-1
 
+*Rotate a matrix clockwise by 90 degrees
+
 ------------------------------------------------------------------------------
 UDEMY
 ------------------------------------------------------------------------------
