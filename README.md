@@ -38,11 +38,16 @@ Renaissance Programming Paathshala
 
 *RotateArrayClockwiseKTimes
 
-*BestTimeToBuyAndSell-1
+*Rotate a matrix clockwise by 90 degrees
 
 *AlyonaAndFlowers
 
-*Rotate a matrix clockwise by 90 degrees
+*BestTimeToBuyAndSell-1
+
+*BestTimeToBuyAndSell-2
+
+*BestTimeToBuyAndSell-3
+
 
 ------------------------------------------------------------------------------
 UDEMY
