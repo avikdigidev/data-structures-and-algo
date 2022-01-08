@@ -16,12 +16,9 @@ public class ArraySuffixMax {
 
     private static int[] getArraySuffixMax(int[] arr, int n) {
         int sMax[] = new int[n];
-        for (int i = n - 1; i >= 0; i--) {
-            if (i == n - 1) {
-                sMax[i] = arr[i];
-            } else {
+        sMax[n - 1] = arr[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
                 sMax[i] = MyUtilities.getMax(sMax[i + 1], arr[i]);
-            }
         }
         return sMax;
     }
