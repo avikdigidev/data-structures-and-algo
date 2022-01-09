@@ -3,7 +3,7 @@ package com.renaissance.arrays;
 //Minimum no. of swaps required to get a sub array which has all the numbers less than or equal to k
 public class MinSwap {
     public static void main(String[] args) {
-        int arr[] = {1, 7, 5, 2, 6, 4};
+        int[] arr = {1, 7, 5, 2, 6, 4};
         int k = 4;
         int swap = minSwap(arr, k);
         System.out.println(swap);
@@ -16,8 +16,8 @@ public class MinSwap {
         //will give no. of elements in array which are <=k
         //will give the size of sliding window
         int legalElements = 0;
-        for (int i = 0; i < n; i++) {
-            if (arr[i] <= k) {
+        for (int i : arr) {
+            if (i <= k) {
                 legalElements++;
             }
         }
@@ -45,10 +45,9 @@ public class MinSwap {
             //by getting the max we will get to know max legalElements which are possible in sub-array
             maxCount = Math.max(maxCount, count);
         }
-        //we can get the min swap count as (legalElements - maxCount) will give the min illegal elements which are there
-        //in sub-array
-        int swaps = legalElements - maxCount;
-        return swaps;
+        //we can get the min swap count as (legalElements - maxCount) will give the min. no. of illegal elements which are there
+        //in sub-array which needs to be removed.
+        return legalElements - maxCount;
     }
 
 
