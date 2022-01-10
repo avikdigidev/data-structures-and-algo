@@ -48,6 +48,9 @@ Renaissance Programming Paathshala
 
 *BestTimeToBuyAndSell-3
 
+*SlidingWindow
+
+*MinSwap
 
 ------------------------------------------------------------------------------
 UDEMY
