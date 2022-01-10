@@ -9,7 +9,7 @@ public class PowerOfNumber {
     }
 
     private static int getPower(int base, int power) {
-        if (power ==1){return 1;}
+        if (power ==0){return 1;}
         return base*getPower(base,power-1);
     }
 }
