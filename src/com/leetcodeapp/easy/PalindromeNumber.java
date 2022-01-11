@@ -1,4 +1,4 @@
-package com.leetcodeapp;
+package com.leetcodeapp.easy;
 
 public class PalindromeNumber {
     public static void main(String[] args) {
