@@ -3,14 +3,14 @@ package com.renaissance.arrays;
 /*Find the sum of all sub arrays of an array*/
 public class ReverseLookup1D {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3};
-        int sum = getSumOfSubArrays(arr);
+        long[] arr = {1, 2, 3};
+        long sum = getSumOfSubArrays(arr);
         System.out.println(sum);
     }
 
-    private static int getSumOfSubArrays(int[] arr) {
-        int n = arr.length;
-        int result = 0;
+    private static long getSumOfSubArrays(long[] arr) {
+        long n = arr.length;
+        long result = 0;
         /*
         here for all the elements we are going to count its contribution in all sub arrays
         for example in the array 1,2,3
@@ -26,10 +26,15 @@ public class ReverseLookup1D {
         so we can easily see that
         a[i] element will come in subarray (i+1)*(n-i) times
         and its contribution will be a[i]*(i+1)*(n-i)
+
+        we are required to answer the result in 10^9+7 modulo.
+        The reason behind this is, if problem constraints are large integers,
+        only efficient algorithms can solve them in allowed limited time.
         */
+        long m = 1000000007;
         for (int i = 0; i < n; i++) {
-            result += arr[i] * (i + 1) * (n - i);
+            result += ((arr[i]%m) * ((i + 1)%m) * ((n - i)%m))%m;
         }
-        return result;
+        return result%m;
     }
 }
