@@ -54,7 +54,7 @@ Renaissance Programming Paathshala
 
 *ReverseLookup1D
 
-
+*RearrangeArray
 
 ------------------------------------------------------------------------------
 UDEMY
