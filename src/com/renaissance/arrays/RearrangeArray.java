@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class RearrangeArray {
     public static void main(String[] args) {
         int [] arr = {1,3,4,2,0}; //{4,0,3,1,2}
+
         int[] swappedArr = rearrangeBruteForce(arr);
-        System.out.println(Arrays.toString(swappedArr));
+
     }
 
     private static int[] rearrangeBruteForce(int[] arr) {
@@ -16,6 +17,7 @@ public class RearrangeArray {
             int val = arr[i];
             res[val] = i;
         }
+        System.out.println(Arrays.toString(res));
         return res;
     }
 }
