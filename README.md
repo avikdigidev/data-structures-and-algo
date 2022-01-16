@@ -52,7 +52,9 @@ Renaissance Programming Paathshala
 
 *MinSwap
 
-*ReverseLookup1D
+*ReverseLookup1D / SumOfAllSubArrays
+
+*ReverseLookup2D/ SumOfAllSubMatrices
 
 *RearrangeArray
 
