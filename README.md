@@ -56,7 +56,7 @@ Renaissance Programming Paathshala
 
 *ReverseLookup2D/ SumOfAllSubMatrices
 
-*RearrangeArray
+*RearrangeArray - brute force and better approach added
 
 *SearchValueInMatrix
 
