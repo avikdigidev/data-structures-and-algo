@@ -85,6 +85,8 @@ Leetcode App
 
 *TwoSum
 
+*SumOfThree
+
 *PalindromeNumber
 
 *ReverseString
