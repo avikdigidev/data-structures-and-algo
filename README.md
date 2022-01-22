@@ -64,7 +64,9 @@ Renaissance Programming Paathshala
 
 *MaxVowels
 
-*GCD- Greatest common divisor
+*GCD- Greatest common divisor of 2 numbers
+
+*GCD- of an array with possible target gcd of any subsequence.
 
 
 
