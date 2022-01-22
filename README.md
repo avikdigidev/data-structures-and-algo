@@ -72,6 +72,7 @@ Renaissance Programming Paathshala
 
 *LCM- af an array
 
+*CountOfMultiples
 
 ------------------------------------------------------------------------------
 UDEMY
