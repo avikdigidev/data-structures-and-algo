@@ -70,6 +70,7 @@ Renaissance Programming Paathshala
 
 *LCM- of 2 numbers
 
+*LCM- af an array
 
 
 ------------------------------------------------------------------------------
