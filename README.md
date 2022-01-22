@@ -68,6 +68,7 @@ Renaissance Programming Paathshala
 
 *GCD- of an array with possible target gcd of any subsequence.
 
+*LCM- of 2 numbers
 
 
 
