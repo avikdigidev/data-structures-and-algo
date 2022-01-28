@@ -106,3 +106,5 @@ Leetcode App
 *PalindromeNumber
 
 *ReverseString
+
+*DuplicatesInArray
