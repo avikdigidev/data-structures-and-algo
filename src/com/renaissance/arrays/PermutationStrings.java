@@ -7,7 +7,7 @@ public class PermutationStrings {
      char[] s2arr=s2.toCharArray();
      int count = 0;
         for (int i = 0; i < s2arr.length; i++) {
-            if (s1.(s2arr[i])) count++;
+        //    if (s1.(s2arr[i])) count++;
         }
     }
 }
