@@ -1,6 +1,7 @@
 package com.renaissance.arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 //https://leetcode.com/problems/find-all-lonely-numbers-in-the-array
 public class LonelyNumber {
@@ -10,7 +11,7 @@ public class LonelyNumber {
     }
     public static List<Integer> findLonely(int[] nums) {
 
-        sortArray(nums);
+        Arrays.sort(nums);
         List<Integer> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++){
             boolean flag = true;
@@ -27,16 +28,5 @@ public class LonelyNumber {
         return res;
     }
 
-    public static void sortArray(int[] arr){
-        for (int i = 0; i < arr.length; i++){
-            for (int j = i + 1; j < arr.length; j++){
-                int tmp = 0;
-                if (arr[i] > arr[j]) {
-                    tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                }
-            }
-        }
-    }
+
 }
