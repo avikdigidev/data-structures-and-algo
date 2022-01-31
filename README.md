@@ -94,6 +94,8 @@ UDEMY
 
 *GCD- Greatest common divisor using Recursion
 
+*DecimalToBinary
+
 
 
 
