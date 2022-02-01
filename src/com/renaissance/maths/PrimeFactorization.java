@@ -3,7 +3,7 @@ package com.renaissance.maths;
 public class PrimeFactorization {
     public static void main(String[] args) {
         int num = 404;
-        getPrimeFactors(num);
+        getPrimeFactors(num); // Runtime complexity: O(Math.sqrt(N)
         getBruteForcePrimeFactors(num);
     }
 
