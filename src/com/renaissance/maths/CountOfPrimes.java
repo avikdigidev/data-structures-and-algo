@@ -32,6 +32,7 @@ public class CountOfPrimes {
                 count++;
             }
         }
+        //return total count
         return count;
     }
 }
