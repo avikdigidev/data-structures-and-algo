@@ -19,7 +19,7 @@ public class SegmentedSieve {
 
         for (int i = 2; i < primes.length; i++) {
 
-            long k = (long) ceil(l ,primes[i]);
+            long k = (long) ceil(l, primes[i]);
             for (int j = (int) Math.max(k, 2); primes[i] * j <= r; j++) {
                 isPrime[(int) ((primes[i] * j) - l)] = false;
 
@@ -29,7 +29,7 @@ public class SegmentedSieve {
 
     private static long ceil(long l, long r) {
         //calculate ceil (a/b) then if a is divisible by b, just do a/b, otherwise you need a/b + 1.
-        return (l%r==0)?l/r:(l/r)+1;
+        return (l % r == 0) ? l / r : (l / r) + 1;
     }
 
     private static long[] getPrimes(long l, long r) {
