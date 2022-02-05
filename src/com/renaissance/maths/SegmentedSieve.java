@@ -17,13 +17,19 @@ public class SegmentedSieve {
         boolean[] isPrime = new boolean[size];
         Arrays.fill(isPrime, true);
 
-        for (int i = 0; i < primes.length; i++) {
-            long k = (long) Math.ceil(1.0 * l / primes[i]);
+        for (int i = 2; i < primes.length; i++) {
+
+            long k = (long) ceil(l ,primes[i]);
             for (int j = (int) Math.max(k, 2); primes[i] * j <= r; j++) {
                 isPrime[(int) ((primes[i] * j) - l)] = false;
 
             }
         }
+    }
+
+    private static long ceil(long l, long r) {
+        //calculate ceil (a/b) then if a is divisible by b, just do a/b, otherwise you need a/b + 1.
+        return (l%r==0)?l/r:(l/r)+1;
     }
 
     private static long[] getPrimes(long l, long r) {
