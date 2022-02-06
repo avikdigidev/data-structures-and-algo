@@ -120,3 +120,5 @@ Leetcode App
 *ReverseString
 
 *DuplicatesInArray
+
+*RemoveElementFromArray

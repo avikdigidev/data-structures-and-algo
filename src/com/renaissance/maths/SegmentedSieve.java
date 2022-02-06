@@ -18,11 +18,9 @@ public class SegmentedSieve {
         Arrays.fill(isPrime, true);
 
         for (int i = 2; i < primes.length; i++) {
-
             long k = (long) ceil(l, primes[i]);
             for (int j = (int) Math.max(k, 2); primes[i] * j <= r; j++) {
                 isPrime[(int) ((primes[i] * j) - l)] = false;
-
             }
         }
     }
