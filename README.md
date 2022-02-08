@@ -1,6 +1,7 @@
 # Data Structures and Algorithms
 
-Problems solved during DSA preparation:
+
+Problems solved during DSA product based company preparation:
 ------------------------------------------------------------------------------
 Renaissance Programming Paathshala
 ------------------------------------------------------------------------------
