@@ -93,6 +93,7 @@ Renaissance Programming Paathshala
 
 *MaxProductSubArray
 
+*CountingPairs
 
 ------------------------------------------------------------------------------
 UDEMY
