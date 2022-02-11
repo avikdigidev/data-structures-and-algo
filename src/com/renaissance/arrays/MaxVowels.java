@@ -2,7 +2,7 @@ package com.renaissance.arrays;
 
 public class MaxVowels {
     public static void main(String[] args) {
-        String ip = "prakash";
+        String ip = "prakaohi";
 
         int k = 3;
         int totalVowels = getMaxVowels(ip, k);
@@ -32,6 +32,7 @@ public class MaxVowels {
     }
 
     private static boolean isVowel(char c) {
+
         return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
     }
 }
