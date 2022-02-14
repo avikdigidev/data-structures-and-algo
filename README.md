@@ -131,3 +131,5 @@ Leetcode App/Website Practice
 *RemoveElementFromArray 
 
 *PalindromeString
+
+*MaxConsecutiveOnes
