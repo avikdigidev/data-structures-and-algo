@@ -135,3 +135,5 @@ Leetcode App/Website Practice
 *MaxConsecutiveOnes
 
 *NumbersWithEvenNumberOfDigits
+
+*SortedSquaresArray
