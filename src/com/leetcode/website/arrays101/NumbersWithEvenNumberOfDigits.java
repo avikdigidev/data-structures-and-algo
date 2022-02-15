@@ -1,4 +1,4 @@
-package com.leetcodeapp.arrays101;
+package com.leetcode.website.arrays101;
 //https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3237/
 public class NumbersWithEvenNumberOfDigits {
     public static void main(String[] args) {

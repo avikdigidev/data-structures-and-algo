@@ -1,10 +1,10 @@
-package com.leetcodeapp.easy;
+package com.leetcode.app.easy;
 
 public class PalindromeString {
 
     public static void main(String[] args) {
         System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
-        ;
+
     }
 
     public static boolean isPalindrome(String s) {
