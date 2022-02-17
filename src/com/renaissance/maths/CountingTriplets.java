@@ -39,27 +39,27 @@ public class CountingTriplets {
                 if ((i + j) % m == 0) {
                     k = 0; // by default if 2 elements are from 0 bucket 3rd will also be from 0
                 } else {
-                    k = m - (i + j) % m;
+                    k = m - ((i + j) % m);
                 }
                 if (k < j) { // to handle the case where no other permutation of j and k is considered again
                     continue;
                 }
-                //when all 3 are equal remainders
+//when all 3 are equal remainders
                 if (i == j && j == k) { //ncr = n!/r!(n-r)! => for triplets n*(n-1)(n-2)/6
                     ans += (countArray[i] * (countArray[i] - 1) * (countArray[i] - 2)) / 6;
                 }
-                //fixing any 2 remainders
+//fixing any 2 remainders
                 else if (i == j) {
-                    ans += (countArray[i] * (countArray[i] - 1)) / 2;
+                    ans += (countArray[i] * (countArray[i] - 1) * countArray[k]) / 2;
                 } else if (i == k) {
-                    ans += (countArray[i] * (countArray[i] - 1)) / 2;
+                    ans += (countArray[i] * (countArray[i] - 1) * countArray[j]) / 2;
                 } else if (k == j) {
-                    ans += (countArray[k] * (countArray[k] - 1)) / 2;
+                    ans += (countArray[j] * (countArray[j] - 1) * countArray[i]) / 2;
                 }
-                //considering those triplets for which (arr[i]+arr[j]+arr[k])%m==0 and every element belongs to different bucket
-                //i.e. when all are different remainders
+//considering those triplets for which (arr[i]+arr[j]+arr[k])%m==0 and every element belongs to different bucket
+//i.e. when all are different remainders
                 else {
-                    ans += countArray[k] * countArray[j] * countArray[k];
+                    ans += countArray[i] * countArray[j] * countArray[k];
                 }
             }
         }
@@ -70,6 +70,7 @@ public class CountingTriplets {
     private static int getCountOfTripletsBruteForce(int[] arr, int m) {
         int count = 0;
         int n = arr.length;
+
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 for (int k = j + 1; k < n; k++) {
