@@ -137,3 +137,5 @@ Leetcode App/Website Practice
 *NumbersWithEvenNumberOfDigits
 
 *SortedSquaresArray
+
+*MergeTwoSortedArrays
