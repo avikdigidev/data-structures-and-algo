@@ -21,19 +21,19 @@ public class PascalsTriangle {
         List<List<Integer>> list = generate(m + n);
 
         //subtracting invalid cases
-        if (t <= m) { //0 boys remaining girls
+        if (t <= m) {           //0 boys remaining girls
             ans -= pas[n][0] * pas[m][t];
         }
-        if (t - 1 <= m) { //1 boy and remaining girls
+        if (t - 1 <= m) {       //1 boy and remaining girls
             ans -= pas[n][1] * pas[m][t - 1];
         }
-        if (t - 2 <= m) {//2 boys remaining girls
+        if (t - 2 <= m) {       //2 boys remaining girls
             ans -= pas[n][2] * pas[m][t - 2];
         }
-        if (t - 3 <= m) {//3 boys remaining girls
+        if (t - 3 <= m) {       //3 boys remaining girls
             ans -= pas[n][3] * pas[m][t - 3];
         }
-        if (t == m) {//all boys 0 girls
+        if (t == m) {           //all boys 0 girls
             ans -= pas[n][t] * pas[m][0];
         }
         System.out.println(ans);
