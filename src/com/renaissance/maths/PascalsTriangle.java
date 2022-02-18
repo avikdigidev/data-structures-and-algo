@@ -1,5 +1,8 @@
 package com.renaissance.maths;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /*There are n boys and m girls. we need to choose a group containing exactly t people
  * having no less than 4 boys and no less than 1 girl.
  * where 4<=n<=30
@@ -14,6 +17,9 @@ public class PascalsTriangle {
         long[][] pas = createPascalTriangle(n, m);
         long ans = 0;
         ans = pas[m + n][t];
+        //https://leetcode.com/problems/pascals-triangle/
+        List<List<Integer>> list = generate(m + n);
+
         //subtracting invalid cases
         if (t <= m) { //0 boys remaining girls
             ans -= pas[n][0] * pas[m][t];
@@ -27,7 +33,7 @@ public class PascalsTriangle {
         if (t - 3 <= m) {//3 boys remaining girls
             ans -= pas[n][3] * pas[m][t - 3];
         }
-        if ( t== m) {//all boys 0 girls
+        if (t == m) {//all boys 0 girls
             ans -= pas[n][t] * pas[m][0];
         }
         System.out.println(ans);
@@ -36,7 +42,7 @@ public class PascalsTriangle {
     private static long[][] createPascalTriangle(int n, int m) {
         long[][] pas = new long[m + n + 1][m + n + 1];
         pas[0][0] = 1;
-        for (int i = 0; i <= m + n; i++) {
+        for (int i = 1; i <= m + n; i++) {
             for (int j = 0; j <= i; j++) {
                 if (j == 0 || j == i) {
                     pas[i][j] = 1;
@@ -48,5 +54,17 @@ public class PascalsTriangle {
 
         }
         return pas;
+    }
+
+    public static List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> allRows = new ArrayList<List<Integer>>();
+        ArrayList<Integer> row = new ArrayList<Integer>();
+        for (int i = 0; i < numRows; i++) {
+            row.add(0, 1);
+            for (int j = 1; j < row.size() - 1; j++)
+                row.set(j, row.get(j) + row.get(j + 1));
+            allRows.add(new ArrayList<Integer>(row));
+        }
+        return allRows;
     }
 }
