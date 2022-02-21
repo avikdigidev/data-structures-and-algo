@@ -2,8 +2,8 @@ package com.renaissance.maths;
 
 public class CatalanNumbers {
     public static void main(String[] args) {
-        //total n pairs of balanced paranthesis
-        int n = 5;
+        //total n pairs of balanced parenthesis
+        int n = 3;
         long count = getCatalanNumbers(n);
         System.out.println(count);
     }
