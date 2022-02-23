@@ -145,3 +145,5 @@ Leetcode App/Website Practice
 *MergeTwoSortedArrays
 
 *RemoveElement
+
+*RemoveDuplicates
