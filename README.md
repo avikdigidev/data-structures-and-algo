@@ -143,3 +143,5 @@ Leetcode App/Website Practice
 *SortedSquaresArray
 
 *MergeTwoSortedArrays
+
+*RemoveElement
