@@ -1,5 +1,5 @@
 package com.leetcode.website.arrays101;
-//
+//https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3248/
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] nums = {1,1,2,4,4,5};
