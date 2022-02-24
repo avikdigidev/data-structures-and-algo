@@ -19,6 +19,6 @@ public class CatalanNumbers {
             }
 
         }
-        return countArray[n];
+        return countArray[n-1];
     }
 }
