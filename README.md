@@ -101,6 +101,8 @@ Renaissance Programming Paathshala
 
 *CatalanNumbers
 
+*CatalanNumberSquareMatrix
+
 ------------------------------------------------------------------------------
 UDEMY
 ------------------------------------------------------------------------------
