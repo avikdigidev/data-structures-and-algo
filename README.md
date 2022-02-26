@@ -149,3 +149,5 @@ Leetcode App/Website Practice
 *RemoveElement
 
 *RemoveDuplicates
+
+*CheckIfNAndItsDoubleExists
