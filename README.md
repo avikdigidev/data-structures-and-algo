@@ -151,3 +151,5 @@ Leetcode App/Website Practice
 *RemoveDuplicates
 
 *CheckIfNAndItsDoubleExists
+
+*MountainArray
