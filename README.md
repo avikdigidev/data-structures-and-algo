@@ -157,3 +157,5 @@ Leetcode App/Website Practice
 *ReplaceElementsWithGreatestElement
 
 *MoveZeros
+
+*SortArrayByParity
