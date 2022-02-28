@@ -153,3 +153,5 @@ Leetcode App/Website Practice
 *CheckIfNAndItsDoubleExists
 
 *MountainArray
+
+*ReplaceElementsWithGreatestElement
