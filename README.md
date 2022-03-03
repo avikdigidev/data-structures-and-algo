@@ -161,3 +161,5 @@ Leetcode App/Website Practice
 *SortArrayByParity
 
 *HeightChecker
+
+*ThirdMax
