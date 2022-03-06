@@ -5,8 +5,8 @@ public class SquareRoot {
     public static void main(String[] args) {
         int num = 40;
         int precision = 3;
-     //   getBinarySearchSquareRoot(num, precision); //T.C:   O(Log(n))
-       //getSquareRootRepeatedSubtractionMethod(num);
+        getBinarySearchSquareRoot(num, precision); //T.C:   O(Log(n))
+       getSquareRootRepeatedSubtractionMethod(num);
        getSquareRootNewtonRaphsonApproach(num);
 
 
@@ -14,7 +14,7 @@ public class SquareRoot {
 
     private static double getSquareRootNewtonRaphsonApproach(int num) {
         double x = num;
-        double root =0.0;
+        double root ;
         while(true){
             root = 0.5*(x+(num/x));
             if (Math.abs(root-x)<0.55){
@@ -33,7 +33,7 @@ public class SquareRoot {
         while (start <= end) {
             int midPoint = start + (end - start) / 2;
             if (midPoint*midPoint==num){
-                return new Double(midPoint);
+                return midPoint;
             }
             if (midPoint*midPoint>num){
                 end = midPoint-1;
