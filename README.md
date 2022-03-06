@@ -165,3 +165,5 @@ Leetcode App/Website Practice
 *ThirdMax
 
 *DisappearedElementsInArray
+
+*SquareRoot
