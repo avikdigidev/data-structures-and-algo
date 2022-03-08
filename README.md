@@ -167,3 +167,5 @@ Leetcode App/Website Practice
 *DisappearedElementsInArray
 
 *SquareRoot
+
+*Factors

@@ -1,4 +1,4 @@
-package com.leetcode.website.easy;
+package com.kk.maths;
 
 //https://leetcode.com/problems/sqrtx/
 public class SquareRoot {
