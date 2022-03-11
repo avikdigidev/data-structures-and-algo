@@ -4,8 +4,8 @@ public class PrintN {
     public static void main(String[] args) {
         int start = 1;
         int n = 10;
-     //   print1ToN(start,n);
-     //   printNTo1(n);
+        print1ToN(start,n);
+        printNTo1(n);
         print1ToN(n);
     }
 
