@@ -105,7 +105,9 @@ Renaissance Programming Paathshala
 
 *TwoBranchRecursion
 
-*Print1ToN
+*PrintN: 1-N, N-1
+
+*PassByReferenceInJava
 
 ------------------------------------------------------------------------------
 UDEMY
