@@ -16,13 +16,13 @@ public class FastFactorization {
         getFastFactorization(primes, spf, num); // O(Nlog(logN))
         int n1 = 5460;
 
-        getPrimeFactors(spf[n1], n1); //For every query O(log2N)
+        getPrimeFactors(spf, n1); //For every query O(log2N)
     }
 
-    private static void getPrimeFactors(int i, int n1) {
-        while (i != -1) {
-            System.out.println(i);
-            n1 = n1 / i;
+    private static void getPrimeFactors(int[] spf, int n1) {
+        while (spf[n1] != -1) {
+            System.out.println(spf[n1]);
+            n1 = n1 / spf[n1];
         }
         if (n1 != 1) {
             System.out.println(n1);
