@@ -188,3 +188,4 @@ CodeSignal
 
 *ShapeArea
 
+*AdjacentElementsProduct
