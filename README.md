@@ -189,3 +189,5 @@ CodeSignal
 *ShapeArea
 
 *AdjacentElementsProduct
+
+*ArrayConsecutive2
