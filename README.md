@@ -191,3 +191,5 @@ CodeSignal
 *AdjacentElementsProduct
 
 *ArrayConsecutive2
+
+*AlmostIncreasingSequence
