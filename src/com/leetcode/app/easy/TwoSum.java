@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-// https://leetcode.com/problems/valid-palindrome/
+
 public class TwoSum {
     public static void main(String[] args) {
         int[] arr = {1,3,5,9};
