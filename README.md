@@ -193,3 +193,5 @@ CodeSignal
 *ArrayConsecutive2
 
 *AlmostIncreasingSequence
+
+*MatrixElementsSum
