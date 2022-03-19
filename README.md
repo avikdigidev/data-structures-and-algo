@@ -111,7 +111,9 @@ Renaissance Programming Paathshala
 
 *PassByReferenceInRecursion
 
-*DistinctPaths1
+*DistinctPaths
+
+*LetterCombinations
 
 ------------------------------------------------------------------------------
 UDEMY
