@@ -184,6 +184,12 @@ Leetcode App/Website Practice
 
 *DieHardProblem
 
+*AnagramString
+
+*MergeSort
+
+*MajorityElements
+
 ------------------------------------------------------------------------------
 CodeSignal
 ------------------------------------------------------------------------------
