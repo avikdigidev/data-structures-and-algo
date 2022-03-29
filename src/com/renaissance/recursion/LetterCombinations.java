@@ -16,22 +16,23 @@ public class LetterCombinations {
         keypad.put(7, new Character[]{'w', 'x', 'y', 'z'});
 
         String input = "23";
-        getCombination("", input, keypad, 0);
-        Character[] result = new Character[input.length()+1];
+       // getCombination("", input, keypad, 0);
+        char[] result = new char[input.length()+1];
         int i = 0;
-        getCombinationEfficiently(result, i, input, keypad);
+        TempArrayRef tempArrayRef = new TempArrayRef(result);
+        getCombinationEfficiently(tempArrayRef, i, input, keypad);
     }
 
-    private static void getCombinationEfficiently(Character[] result, int index, String input, HashMap<Integer, Character[]> keypad) {
+    private static void getCombinationEfficiently(TempArrayRef result, int index, String input, HashMap<Integer, Character[]> keypad) {
         if (input.length() == index) {
-            System.out.println(Arrays.toString(result));
+            System.out.println(Arrays.toString(result.value));
             return;
         }
         char current = input.charAt(index);
         int keypadIndex = current - '2';
 
         for (int i = 0; i < keypad.get(keypadIndex).length; i++) {
-            result[i] = keypad.get(keypadIndex)[i];
+            result.value[i] = keypad.get(keypadIndex)[i];
             getCombinationEfficiently(result, index + 1, input, keypad);
         }
     }
@@ -42,8 +43,8 @@ public class LetterCombinations {
             return;
         }
         char current = input.charAt(index);
-        int keypadIndex = current - '2'; //why are we doing this? is there a better approach?
-        /*
+        int keypadIndex = current - '2';
+        /*why are we doing this? is there a better approach?
             Because we have stored the letters for keypad 2 in keypad[0], and not in keypad[2].
             keypad.put(0, new Character[]{'a', 'b', 'c'});
             If you want to avoid subtracting, replace 0 with 2 in keypad.put.
@@ -55,5 +56,12 @@ public class LetterCombinations {
             getCombination(ansSoFar, input, keypad, index + 1);
         }
 
+    }
+}
+class TempArrayRef {
+    char[] value;
+
+    TempArrayRef(char[]  value) {
+        this.value = value;
     }
 }
