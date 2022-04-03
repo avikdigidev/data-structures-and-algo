@@ -1,15 +1,41 @@
 package com.interview.test.tatanexarc;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Round1 {
     //TODO implement linkedList
-    //TODO get primes till 100
-    //TODO get vowels from string
+    // get count of primes till 100
+    // get vowels from string
 
     public static void main(String[] args) {
+        //2
+        System.out.println(getPrimeCount(100));
         //3
         getVowelCount();
+
+    }
+
+    private static int getPrimeCount(int n) {
+        int count = 0;
+        boolean[] isPrime = new boolean[n + 1];
+        for (int i = 1; i < isPrime.length; i++) {
+            isPrime[i] = true;
+        }
+        isPrime[1] = false;
+        for (int i = 2; i * i <= n; i++) {
+            if (isPrime[i]) {
+                for (int j = i; i * j <= n; j++) {
+                    isPrime[i * j] = false;
+                }
+            }
+        }
+        for (int i = 2; i < isPrime.length; i++) {
+            if (i < n && isPrime[i]) {
+                count++;
+            }
+        }
+        return  count;
     }
 
     private static void getVowelCount() {
