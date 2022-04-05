@@ -27,8 +27,26 @@ public class FirstDuplicate {
 
     public static void main(String[] args) {
         int[] array = {2, 1, 3, 5, 3, 2};
+        int result2 = bruteForce(array);
+        System.out.println(result2);
         int result = mostEfficient(array);
         System.out.println(result);
+    }
+
+    private static int bruteForce(int[] array) {
+        int minIndexOfDuplicate = array.length;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    minIndexOfDuplicate = Math.min(minIndexOfDuplicate, j);
+                }
+            }
+        }
+        if (minIndexOfDuplicate == array.length) {
+            return -1;
+        } else {
+            return array[minIndexOfDuplicate];
+        }
     }
 
     public static int mostEfficient(int[] a) {
