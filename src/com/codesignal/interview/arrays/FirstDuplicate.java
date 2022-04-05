@@ -1,5 +1,7 @@
 package com.codesignal.interview.arrays;
 
+import java.util.HashSet;
+
 /*
 * Given an array a that contains only numbers in the range from 1 to a.length,
 * find the first duplicate number for which the second occurrence has the minimal index.
@@ -27,10 +29,24 @@ public class FirstDuplicate {
 
     public static void main(String[] args) {
         int[] array = {2, 1, 3, 5, 3, 2};
-        int result2 = bruteForce(array);
+        int result2 = bruteForce(array); // TC O(N^2)
         System.out.println(result2);
-        int result = mostEfficient(array);
+        int result3 = extraSpace(array); // SC & TC O(N)
+        System.out.println(result3);
+        int result = mostEfficient(array); // TC O(N)
         System.out.println(result);
+
+    }
+
+    private static int extraSpace(int[] array) {
+        HashSet<Integer> set = new HashSet<>();
+        for (int i = 0; i < array.length; i++) {
+            if (set.contains(array[i])){
+                return array[i];
+            }
+            set.add(array[i]);
+        }
+        return -1;
     }
 
     private static int bruteForce(int[] array) {
