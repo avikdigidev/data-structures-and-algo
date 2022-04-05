@@ -203,3 +203,5 @@ CodeSignal
 *AlmostIncreasingSequence
 
 *MatrixElementsSum
+
+*FirstDuplicate
