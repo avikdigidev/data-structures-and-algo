@@ -12,7 +12,6 @@ Renaissance Programming Paathshala
 
 *PrefixSum
 
-
 *SuffixMax
 
 *SuffixMin
