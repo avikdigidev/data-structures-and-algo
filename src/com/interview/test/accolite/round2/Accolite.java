@@ -7,11 +7,11 @@ import java.util.Stack;
 
 public class Accolite {
     public static void main(String[] args) {
-        // sort array with O(NlogN) efficiency
+        //  1st sort array with O(NlogN) efficiency
         int[] array = {9, 8, 7, 6, 1, 2, 3, 4, 5, 2};
         mergeSort(array, array.length);
         System.out.println(Arrays.toString(array));
-        // sort hashMap based on values using Stream.
+        // 2nd sort hashMap based on values using Stream.
         HashMap<Integer, String> hm = new HashMap<>();
         hm.put(1, "Prakash");
         hm.put(2, "Pradeep");
@@ -20,7 +20,7 @@ public class Accolite {
         hm.put(5, "Pash");
         hm.entrySet().stream().sorted(Map.Entry.comparingByValue()).forEach(e -> System.out.println(e.getValue()));
 
-        // TODO without doing any iteration add, delete and min in O(1) maybe by stack
+        // 3rd without doing any iteration add, delete and min in O(1) maybe by stack
 
     }
 
