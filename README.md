@@ -204,3 +204,5 @@ CodeSignal
 *MatrixElementsSum
 
 *FirstDuplicate
+
+*AllLongestStrings
