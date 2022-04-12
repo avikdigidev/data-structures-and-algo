@@ -206,3 +206,5 @@ CodeSignal
 *FirstDuplicate
 
 *AllLongestStrings
+
+*CommonCharacterCount
