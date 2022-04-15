@@ -212,3 +212,5 @@ CodeSignal
 *CommonCharacterCount
 
 *LuckyNumber
+
+*SortByHeight
