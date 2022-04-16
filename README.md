@@ -216,3 +216,5 @@ CodeSignal
 *LuckyNumber
 
 *SortByHeight
+
+*ReverseInParentheses
