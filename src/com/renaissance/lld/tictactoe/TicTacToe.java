@@ -22,7 +22,7 @@ package com.renaissance.lld.tictactoe;
 * */
 public class TicTacToe {
     private final Player player1, player2;
-    private final Board board;
+    private final GameBoard board;
 
 
     public TicTacToe(Player player1, Player player2, Board board) {

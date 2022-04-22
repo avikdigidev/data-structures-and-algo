@@ -1,20 +1,23 @@
 package com.renaissance.lld.tictactoe;
 
-public class Board {
+public class Board implements GameBoard {
     private final char[][] board;
+    private final int dimension;
 
-    public Board() {
-        this.board = new char[3][3];
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+    public Board(int dimension) {
+        this.dimension = dimension;
+        this.board = new char[dimension][dimension];
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 this.board[i][j] = '.';
             }
         }
     }
 
+    @Override
     public boolean isFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
+        for (int i = 0; i < dimension; i++) {
+            for (int j = 0; j < dimension; j++) {
                 if (this.board[i][j] == '.')
                     return false;
             }
@@ -22,16 +25,20 @@ public class Board {
         return true;
     }
 
+    @Override
     public void applyMove(Move currentMove, char symbol) {
-        this.board[currentMove.getY()][currentMove.getX()] = symbol;
+        if (currentMove.getX()== '.')
+            this.board[currentMove.getY()][currentMove.getX()] = symbol;
+
     }
 
+    @Override
     public boolean hasWinningLine(char symbol) {
         return hasHorizontalWinningLine(symbol) || hasDiagonalWinningLine(symbol) || hasVerticalWinningLine(symbol);
     }
 
     private boolean hasVerticalWinningLine(char symbol) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < dimension; i++) {
             if (this.board[0][i] == symbol && this.board[1][i] == symbol && this.board[2][i] == symbol)
                 return true;
         }
@@ -48,5 +55,9 @@ public class Board {
                 return true;
         }
         return false;
+    }
+@Override
+    public int getDimension() {
+        return dimension;
     }
 }
