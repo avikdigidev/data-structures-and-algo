@@ -12,7 +12,6 @@ Renaissance Programming Paathshala
 
 *PrefixSum
 
-
 *SuffixMax
 
 *SuffixMin
@@ -115,6 +114,8 @@ Renaissance Programming Paathshala
 
 *LetterCombinations
 
+*AllSubsetsOfSet
+
 ------------------------------------------------------------------------------
 UDEMY
 ------------------------------------------------------------------------------
@@ -184,6 +185,20 @@ Leetcode App/Website Practice
 
 *DieHardProblem
 
+*AnagramString
+
+*MergeSort
+
+*MajorityElements
+
+*FindPivotIndex
+
+*LargestNumberAtLeastTwiceOfOthers
+
+*PlusOne
+
+*DiagonalTraverse
+
 ------------------------------------------------------------------------------
 CodeSignal
 ------------------------------------------------------------------------------
@@ -197,3 +212,25 @@ CodeSignal
 *AlmostIncreasingSequence
 
 *MatrixElementsSum
+
+*FirstDuplicate
+
+*AllLongestStrings
+
+*CommonCharacterCount
+
+*LuckyNumber
+
+*SortByHeight
+
+*ReverseInParentheses
+
+------------------------------------------------------------------------------
+Practice
+------------------------------------------------------------------------------
+
+*CountDiv
+
+*FastestCar
+
+*FrequentWord

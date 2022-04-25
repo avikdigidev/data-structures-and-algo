@@ -1,4 +1,4 @@
-package com.interview.test;
+package com.interview.test.accolite.round1;
 
 import java.util.Arrays;
 import java.util.HashSet;
