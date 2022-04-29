@@ -234,3 +234,7 @@ Practice
 *FastestCar
 
 *FrequentWord
+
+*FindErrorNumber
+
+*SatisfyingNumber
