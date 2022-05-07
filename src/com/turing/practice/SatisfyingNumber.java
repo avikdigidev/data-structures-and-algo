@@ -1,4 +1,4 @@
-package com.interview.practice;
+package com.turing.practice;
 
 public class SatisfyingNumber {
     public static void main(String[] args) {
