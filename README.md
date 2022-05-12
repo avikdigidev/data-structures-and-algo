@@ -199,6 +199,8 @@ Leetcode App/Website Practice
 
 *DiagonalTraverse
 
+*BaseballGame
+
 ------------------------------------------------------------------------------
 CodeSignal
 ------------------------------------------------------------------------------
@@ -225,6 +227,8 @@ CodeSignal
 
 *ReverseInParentheses
 
+*FirstNotRepeatingCharacter
+
 ------------------------------------------------------------------------------
 Practice
 ------------------------------------------------------------------------------
@@ -234,3 +238,7 @@ Practice
 *FastestCar
 
 *FrequentWord
+
+*FindErrorNumber
+
+*SatisfyingNumber
