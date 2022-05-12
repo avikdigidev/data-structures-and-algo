@@ -1,37 +1,44 @@
 package com.interview.test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
 public class Altimetrik {
     public static void main(String[] args) {
-        int[] arr = {2, 9, 10, 6, 3, 7};
-        // int result = findSecondLargestNumber(arr);
-        // System.out.println(result);
+        int[] arr = {12, 35, 1, 10, 34, 1};
+        int result = findSecondLargestNumber(arr);
+        System.out.println(result);
         String s1 = "listen";
         String s2 = "silent";
         boolean isAnagram = checkForAnagram(s1, s2);
+
+        Predicate<Integer> isEven = (a)->a%2==0;
         System.out.println(isAnagram);
-int a= 9;
-     //   Predicate<Integer> isOdd  = (a%2==0)-> true;
+        int b = 9;
+        isEven.test(b);
 
     }//config/naming server //how to trace requests
-public void sample(List<Object> ls){
+
+    public void sample(List<Object> ls) {
 
 
+    }
 
-}
     private static boolean checkForAnagram(String s1, String s2) {
         if (s1.length() != s2.length()) return false;
-        Arrays.sort(s1.toCharArray());
-        Arrays.sort(s2.toCharArray());
-        if (s1.equals(s2)) {
-            return true;
+        int[] alphabet = new int[26];
+
+        for (int i = 0; i < s1.length(); i++) {
+            alphabet[s1.charAt(i) - 'a']++;
         }
-        return false;
+        for (int i = 0; i < s2.length(); i++) {
+            alphabet[s2.charAt(i) - 'a']--;
+        }
 
-
+        for (int alpha : alphabet) {
+            if (alpha != 0) return false;
+        }
+        return true;
     }
 
     private static int findSecondLargestNumber(int[] arr) {
@@ -40,8 +47,9 @@ public void sample(List<Object> ls){
             if (arr[i] > first) { //2
                 second = first;
                 first = arr[i];
-
-
+            }
+            else if(arr[i]>second && arr[i]!=first){
+                second = arr[i];
             }
         }
 
