@@ -1,4 +1,4 @@
-package com.interview;
+package com.interview.test;
 
 import java.util.Objects;
 
