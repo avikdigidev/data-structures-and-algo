@@ -1,4 +1,4 @@
-package com.interview;
+package com.interview.test;
 
 public class FreeStoneInfoTech {
     public static void main(String[] args) {
