@@ -23,7 +23,7 @@ public class ReadWriteExecute {
             if (counter > 5) {
 
                 o += toValue(charsOfInput[i], hmn);
-            } else if (counter > 2 && counter <=5) {
+            } else if (counter > 2) {
                 t += toValue(charsOfInput[i], hmn);
 
             } else if(counter <= 2 ){
