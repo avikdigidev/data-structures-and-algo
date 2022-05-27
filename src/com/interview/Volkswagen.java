@@ -1,3 +1,4 @@
+/*
 package com.interview;
 
 import java.util.ArrayList;
@@ -11,15 +12,18 @@ public class Volkswagen {
         TwoSum ts = (a,b)->a+b;
         int sum = ts.getSum(3,4);
         System.out.println(sum);
+*/
 /*Students id, name,
 * list to map
 * id would be key
-* name would be value*/
+* name would be value*//*
+
        int[][] arr =  {{1,2,4},{3,5}};
       int sum2 =  Arrays.asList(arr).stream().flatMapToInt(i-> Arrays.stream(i)).sum();
         System.out.println(sum2);
         List<Student> stuList = new ArrayList<>();
- /*
+ */
+/*
 @Controller
         @Autow
         service interface
@@ -72,7 +76,8 @@ public class Volkswagen {
     *  //write test for repository
     *
     *
-    * */
+    * *//*
+
 
 
 
@@ -105,3 +110,4 @@ public class Volkswagen {
         int getSum(int a, int b);
 
     }}
+*/
