@@ -8,6 +8,7 @@ public class MSys {
         int n = arr.length;
         int[] minMax = getMinMax(arr, n);
         System.out.println(Arrays.toString(minMax));
+      //  Arrays.stream(arr).min
     }
 
     private static int[] getMinMax(int[] arr, int n) {
