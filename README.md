@@ -238,6 +238,7 @@ LinkedIn Learning- Java Algorithms
 
 *IsUppercase
 
+*IsPasswordComplex
 
 ------------------------------------------------------------------------------
 Practice
