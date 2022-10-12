@@ -240,6 +240,10 @@ LinkedIn Learning- Java Algorithms
 
 *IsPasswordComplex
 
+*NormalizeString
+
+*ReverseString
+
 ------------------------------------------------------------------------------
 Practice
 ------------------------------------------------------------------------------
