@@ -5,7 +5,12 @@ public class ReverseString {
     public static void main(String[] args) {
         String s = "hello";
         System.out.println(reverse(s));
+        System.out.println(reverse2(s));
+    }
 
+    private static String reverse2(String s) {
+        StringBuilder reversed = new StringBuilder(s);
+        return reversed.reverse().toString();
     }
 
     private static String reverse(String s) {
@@ -18,4 +23,6 @@ public class ReverseString {
         }
         return reversed.toString();
     }
+
+
 }
