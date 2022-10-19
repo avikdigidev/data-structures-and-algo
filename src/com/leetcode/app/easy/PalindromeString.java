@@ -9,12 +9,10 @@ public class PalindromeString {
     }
 
     public static boolean isPalindrome(String s) {
-        if(s==null) return false;
+        if (s == null) return false;
         s = s.toLowerCase();
-        s = s.replaceAll("[^a-z0-9]", "");
-        char[] charList = s.toCharArray();
         int start = 0;
-        int end = charList.length - 1;
+        int end = s.length() - 1;
         return checkPalindrome(s, start, end);
     }
 
