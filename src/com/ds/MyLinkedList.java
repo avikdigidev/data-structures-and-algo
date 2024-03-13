@@ -26,7 +26,6 @@ public class MyLinkedList {
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
-        System.out.println(temp.value);
         return temp;
     }
 
@@ -50,7 +49,7 @@ public class MyLinkedList {
         } else {
             Node newNode = new Node(value);
             Node prev = get(index - 1);
-            newNode.next= prev.next;
+            newNode.next = prev.next;
             prev.next = newNode;
         }
         length++;
@@ -74,6 +73,24 @@ public class MyLinkedList {
             tail = newNode;
         }
         length++;
+    }
+
+    public Node remove(int index) {
+        if (index < 0 || index > length) {
+            return null;
+        } else if (index == 0) {
+            removeFirst();
+        } else if (index == length-1) {
+            removeLast();
+        } else {
+            Node prev = get(index-1);
+            Node temp = prev.next;
+            prev.next = temp.next;
+            temp.next = null;
+            length--;
+            return temp;
+        }
+        return null;
     }
 
     public Node removeFirst() {
