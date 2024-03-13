@@ -6,6 +6,13 @@ public class MyLinkedList {
     private Node tail;
     private int length;
 
+    public MyLinkedList(int value) {
+        Node newNode = new Node(value);
+        head = newNode;
+        tail = newNode;
+        length = 1;
+    }
+
     public void getHead() {
         System.out.println("Head: " + head.value);
     }
@@ -54,13 +61,6 @@ public class MyLinkedList {
         }
         length++;
         return true;
-    }
-
-    public MyLinkedList(int value) {
-        Node newNode = new Node(value);
-        head = newNode;
-        tail = newNode;
-        length = 1;
     }
 
     public void append(int value) {
@@ -176,4 +176,5 @@ public class MyLinkedList {
             this.value = value;
         }
     }
+
 }
