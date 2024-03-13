@@ -12,6 +12,7 @@ public class MyLinkedListTester {
         System.out.println("***************************************");
         myLinkedList.get(2);
         myLinkedList.set(0, 99);
+        myLinkedList.insert(0,989);
         myLinkedList.getHead();
         myLinkedList.getTail();
         myLinkedList.getLength();
