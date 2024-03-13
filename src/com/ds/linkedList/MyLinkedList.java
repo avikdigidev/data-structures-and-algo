@@ -13,12 +13,14 @@ public class MyLinkedList {
         length = 1;
     }
 
-    public void getHead() {
+    public Node getHead() {
         System.out.println("Head: " + head.value);
+        return head;
     }
 
-    public void getTail() {
+    public Node getTail() {
         System.out.println("Tail: " + tail.value);
+        return tail;
     }
 
     public void getLength() {
@@ -184,6 +186,18 @@ public class MyLinkedList {
             fast = fast.next.next;
         }
         return slow.value;
+    }
+    public boolean hasLoop(){
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow ==fast){
+                return true;
+            }
+        }
+        return false;
     }
 
     class Node {
