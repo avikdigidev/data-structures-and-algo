@@ -11,7 +11,7 @@ public class MyLinkedListTester {
         //myLinkedList.removeFirst();
         System.out.println("***************************************");
         myLinkedList.get(2);
-
+        myLinkedList.set(0, 99);
         myLinkedList.getHead();
         myLinkedList.getTail();
         myLinkedList.getLength();
