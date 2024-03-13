@@ -80,10 +80,10 @@ public class MyLinkedList {
             return null;
         } else if (index == 0) {
             removeFirst();
-        } else if (index == length-1) {
+        } else if (index == length - 1) {
             removeLast();
         } else {
-            Node prev = get(index-1);
+            Node prev = get(index - 1);
             Node temp = prev.next;
             prev.next = temp.next;
             temp.next = null;
@@ -143,6 +143,29 @@ public class MyLinkedList {
             System.out.print(temp.value + ",");
             temp = temp.next;
         }
+    }
+
+    public void reverse() {
+        if (head == null || head.next == null) {
+            // If the list is empty or has only one node, no need to reverse
+            return;
+        }
+
+        Node before = null;
+        Node current = head;
+        Node after;
+
+        while (current != null) {
+            after = current.next; // Store the next node
+            current.next = before; // Reverse the pointer
+            before = current; // Move before pointer one step ahead
+            current = after; // Move current pointer one step ahead
+        }
+
+        // After the loop, 'before' will point to the new head of the reversed list
+        tail = head; // Update the tail to point to the previous head
+        head = before; // Update the head to point to the last node, which is the new head
+
     }
 
     class Node {

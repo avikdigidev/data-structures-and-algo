@@ -21,6 +21,9 @@ public class MyLinkedListTester {
         myLinkedList.remove(4);
         System.out.println();
         myLinkedList.print();
+        myLinkedList.reverse();
+        System.out.println();
+        myLinkedList.print();
     }
 
 }
