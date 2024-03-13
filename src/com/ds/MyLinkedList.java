@@ -18,6 +18,18 @@ public class MyLinkedList {
         System.out.println("length: " + length);
     }
 
+    public Node get(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        System.out.println(temp.value);
+        return temp;
+    }
+
     public MyLinkedList(int value) {
         Node newNode = new Node(value);
         head = newNode;
