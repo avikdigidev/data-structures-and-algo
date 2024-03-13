@@ -173,12 +173,12 @@ public class MyLinkedList {
 
     public int findMiddleNode() {
         /*
-        * In this problem, you should use the slow and fast pointer technique (also known as Floyd's Tortoise and Hare algorithm)
-        *  to find the middle element of the linked list efficiently.
-        * The key idea is to have two pointers, one that moves twice as fast as the other.
-        * By the time the fast pointer reaches the end of the linked list, the slow pointer will be at the middle.
-        *
-        * */
+         * In this problem, you should use the slow and fast pointer technique (also known as Floyd's Tortoise and Hare algorithm)
+         *  to find the middle element of the linked list efficiently.
+         * The key idea is to have two pointers, one that moves twice as fast as the other.
+         * By the time the fast pointer reaches the end of the linked list, the slow pointer will be at the middle.
+         *
+         * */
         Node slow = head;
         Node fast = head;
         while (fast != null && fast.next != null) {
@@ -187,17 +187,33 @@ public class MyLinkedList {
         }
         return slow.value;
     }
-    public boolean hasLoop(){
+
+    public boolean hasLoop() {
         Node slow = head;
         Node fast = head;
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
-            if(slow ==fast){
+            if (slow == fast) {
                 return true;
             }
         }
         return false;
+    }
+
+    public int findKthFromEnd(int k) {
+        Node slow = head;
+        Node fast = head;
+        for (int i = 0; i < k; i++) {
+            if (fast == null) return -1;
+            fast = fast.next;
+        }
+        while (fast != null) {
+            slow = slow.next;
+            fast = fast.next;
+
+        }
+        return slow.value;
     }
 
     class Node {
