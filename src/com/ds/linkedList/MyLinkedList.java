@@ -1,4 +1,4 @@
-package com.ds;
+package com.ds.linkedList;
 
 
 public class MyLinkedList {
@@ -45,24 +45,6 @@ public class MyLinkedList {
         return false;
     }
 
-    public boolean insert(int index, int value) {
-        if (index < 0 || index > length) {
-            return false;
-        }
-        if (index == 0) {
-            prepend(value);
-        } else if (index == length) {
-            append(value);
-        } else {
-            Node newNode = new Node(value);
-            Node prev = get(index - 1);
-            newNode.next = prev.next;
-            prev.next = newNode;
-        }
-        length++;
-        return true;
-    }
-
     public void append(int value) {
         Node newNode = new Node(value);
         if (length == 0) {
@@ -75,22 +57,16 @@ public class MyLinkedList {
         length++;
     }
 
-    public Node remove(int index) {
-        if (index < 0 || index > length) {
-            return null;
-        } else if (index == 0) {
-            removeFirst();
-        } else if (index == length - 1) {
-            removeLast();
+    public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
         } else {
-            Node prev = get(index - 1);
-            Node temp = prev.next;
-            prev.next = temp.next;
-            temp.next = null;
-            length--;
-            return temp;
+            newNode.next = head;
+            head = newNode;
         }
-        return null;
+        length++;
     }
 
     public Node removeFirst() {
@@ -125,16 +101,41 @@ public class MyLinkedList {
 
     }
 
-    public void prepend(int value) {
-        Node newNode = new Node(value);
-        if (length == 0) {
-            head = newNode;
-            tail = newNode;
+    public boolean insert(int index, int value) {
+        if (index < 0 || index > length) {
+            return false;
+        }
+        if (index == 0) {
+            prepend(value);
+        } else if (index == length) {
+            append(value);
         } else {
-            newNode.next = head;
-            head = newNode;
+            Node newNode = new Node(value);
+            Node prev = get(index - 1);
+            newNode.next = prev.next;
+            prev.next = newNode;
         }
         length++;
+        return true;
+    }
+
+
+    public Node remove(int index) {
+        if (index < 0 || index > length) {
+            return null;
+        } else if (index == 0) {
+            removeFirst();
+        } else if (index == length - 1) {
+            removeLast();
+        } else {
+            Node prev = get(index - 1);
+            Node temp = prev.next;
+            prev.next = temp.next;
+            temp.next = null;
+            length--;
+            return temp;
+        }
+        return null;
     }
 
     public void print() {
@@ -166,6 +167,16 @@ public class MyLinkedList {
         tail = head; // Update the tail to point to the previous head
         head = before; // Update the head to point to the last node, which is the new head
 
+    }
+
+    public int findMiddleNode() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.value;
     }
 
     class Node {

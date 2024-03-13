@@ -1,6 +1,6 @@
-package com.test.ds;
+package com.ds.linkedList.test;
 
-import com.ds.MyLinkedList;
+import com.ds.linkedList.MyLinkedList;
 
 public class MyLinkedListTester {
     public static void main(String[] args) {
