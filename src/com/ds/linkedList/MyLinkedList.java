@@ -1,6 +1,9 @@
 package com.ds.linkedList;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MyLinkedList {
     private Node head;
     private Node tail;
@@ -271,7 +274,25 @@ public class MyLinkedList {
         // The head now points to the start of the first list.
         head = dummy1.next;
     }
+    public void removeDuplicates() {
+        Node prev= null;
+        Node current = head;
+        Set<Integer> set = new HashSet<>();
 
+        while(current!=null){
+            if (set.contains(current.value)){
+                prev.next = current.next;
+                length--;
+            }else{
+                set.add(current.value);
+                prev=current;
+
+            }
+            current = current.next;
+        }
+
+
+    }
     class Node {
         int value;
         Node next;
