@@ -37,6 +37,18 @@ public class MyLinkedList {
         length++;
     }
 
+    public Node removeFirst() {
+        if (length == 0) return null;
+        Node temp = head;
+        head = head.next;
+        temp.next = null;
+        length--;
+        if (length == 0) {
+            tail = null;
+        }
+        return temp;
+    }
+
     public Node removeLast() {
         if (length == 0) return null;
 
@@ -58,6 +70,15 @@ public class MyLinkedList {
     }
 
     public void prepend(int value) {
+        Node newNode = new Node(value);
+        if (length == 0) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            newNode.next = head;
+            head = newNode;
+        }
+        length++;
     }
 
     public boolean insert(int index, int value) {

@@ -7,6 +7,9 @@ public class MyLinkedListTester {
         MyLinkedList myLinkedList = new MyLinkedList(4);
         myLinkedList.append(3);
         myLinkedList.removeLast();
+        myLinkedList.prepend(1);
+myLinkedList.removeFirst();
+        System.out.println("***************************************");
         myLinkedList.getHead();
         myLinkedList.getTail();
         myLinkedList.getLength();
