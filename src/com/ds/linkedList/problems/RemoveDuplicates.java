@@ -2,9 +2,7 @@ package com.ds.linkedList.problems;
 
 import com.ds.linkedList.MyLinkedList;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
+
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
