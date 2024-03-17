@@ -1,4 +1,4 @@
-package com.scalar;
+package com.scalar.arrays;
 
 import java.util.Arrays;
 

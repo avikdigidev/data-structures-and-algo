@@ -1,4 +1,4 @@
-package com.scalar;
+package com.scalar.arrays;
 
 public class SmallestProductNumber {
     public static void main(String[] args) {
