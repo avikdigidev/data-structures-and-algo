@@ -21,13 +21,20 @@ public class MyHash {
         }
     }
 
-    public void insert(int e) {
+    public boolean insert(int e) {
+        if (size == capacity) return false;
         int i = calculateHash(e);
-        if (arr[i] == -1 || arr[i] == -2) { //slot empty or element was deleted before
-            arr[i] = e;
-        } else {
-
+        while (arr[i] != -1 && arr[i] != -2 && arr[i] != e) { //slot empty and element was deleted before and element doesnt exist
+            i = (i + 1) % capacity;
         }
+        if (arr[i] == e) {
+            return false;
+        } else {
+            arr[i] = e;
+            size++;
+            return true;
+        }
+
     }
 
     public boolean search(int e) {
@@ -47,9 +54,18 @@ public class MyHash {
     }
 
     public void erase(int e) {
-        int i = calculateHash(e);
-        if (arr[i] == e) {
-            arr[i] = -2;
+        int hash = calculateHash(e);
+        int i = hash;
+        while(arr[i] != -1) {
+            if (arr[i] == e) {
+                arr[i] = -2;
+                return;
+            }
+            i = (i+1)%capacity;
+            if (i==hash){
+                return;
+            }
         }
+
     }
 }
