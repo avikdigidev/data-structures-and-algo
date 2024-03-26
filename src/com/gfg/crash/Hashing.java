@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Stream;
 
 public class Hashing {
     public static void main(String[] args) {
@@ -29,7 +30,69 @@ public class Hashing {
         int[] bitArr = {1, 1, 1, 0, 1, 0};
         System.out.println(naive_longestSubArrayWithZerosAndOnes(bitArr));
         System.out.println(longestSubArrayWithZerosAndOnes(bitArr));
+        int[] array = {1, 2, 3, 5, 4, 8, 6, 8, 5};
+        System.out.println(efficient_countOfDistinct(array));
+        Stream.of(frequencyOfAll(array)).forEach((e) -> System.out.println(e.entrySet()));
 
+    }
+
+    private static int[] linearProbing(int hash_size, int arr[], int sizeOfArray) {
+        int[] hashTable = new int[hash_size];
+        for (int i = 0; i < sizeOfArray - 1; i++) {
+            hashTable[i] = -1;
+        }
+        for (int i = 0; i < sizeOfArray - 1; i++) {
+
+
+            if (hashTable[arr[i] % hash_size] == -1) {
+                hashTable[arr[i] % hash_size] = arr[i];
+            } else {
+                int counter = 0;
+                boolean found = false;
+                int hash = arr[i] % hash_size;
+                while (counter < hash && hashTable[hash] != -1) {
+
+                    if (hashTable[hash] == arr[i]) {
+                        found = true;
+                        break;
+                    }
+                    hash = (hash + 1) % hash_size;
+                    counter++;
+                }
+                if (found) {
+                    continue;
+
+                }
+                if (counter < hash_size) {
+                    hashTable[hash] = arr[i];
+                }
+            }
+
+
+        }
+        return hashTable;
+    }
+
+    private static Map<Integer, Integer> frequencyOfAll(int[] array) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < array.length; i++) {
+            if (map.containsKey(array[i])) {
+                map.put(array[i], map.get(array[i]) + 1);
+            } else {
+                map.put(array[i], 1);
+            }
+
+        }
+        return map;
+
+    }
+
+    private static int efficient_countOfDistinct(int[] arr1) {
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < arr1.length; i++) {
+            set.add(arr1[i]);
+        }
+        return set.size();
     }
 
     private static int longestSubArrayWithZerosAndOnes(int[] bitArr) {
@@ -39,18 +102,18 @@ public class Hashing {
                 bitArr[i] = -1;
         }
         //now find the longest subArray with 0 sum;
-        int result =0, target =0, prefixSum = 0;
+        int result = 0, target = 0, prefixSum = 0;
         Map<Integer, Integer> resultMap = new HashMap<Integer, Integer>();
         for (int i = 0; i < bitArr.length; i++) {
             prefixSum += bitArr[i];
-            if (prefixSum==target){
-                result= i+1;
+            if (prefixSum == target) {
+                result = i + 1;
             }
-            if (!resultMap.containsKey(prefixSum)){
-                resultMap.put(prefixSum,i);
+            if (!resultMap.containsKey(prefixSum)) {
+                resultMap.put(prefixSum, i);
             }
-            if (resultMap.containsKey(prefixSum-target)){
-                result = Math.max(result, i- resultMap.get(prefixSum-target));
+            if (resultMap.containsKey(prefixSum - target)) {
+                result = Math.max(result, i - resultMap.get(prefixSum - target));
             }
         }
         return result;
@@ -68,7 +131,7 @@ public class Hashing {
                     c1++;
                 }
                 if (c0 == c1) {
-                    sum =  Math.max(sum, c0 + c1);
+                    sum = Math.max(sum, c0 + c1);
                 }
             }
         }
